@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Bus Depo</title>
+        <style>
+            
+            .table{
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .search{
+                margin-top: 20px;
+            }
+            th, td{
+                text-align: center;
+                height: 40px;
+                padding: 5px;
+            }
+            input {
+                height: 40px;
+                text-indent: 20px;
+            }
+            button {
+               padding: 10px;
+           }
+
+        </style>
+    </head>
+    <body>
+        <div class="form">
+        
+            <form onsubmit="addBus(event)">
+              <input type="text" required placeholder="Name" id="name" />
+              <input type="text" required placeholder="Source" id="source" />
+              <input type="text" required placeholder="Destination" id="destination" />
+              <input type="number" required placeholder="Number" id="number" />
+              <input type="number" required placeholder="Passanger Capacity" id="passangerCap" />
+              <button type="submit">Add Bus</button><br>
+            </form>
+
+            <div class="search">
+                <input
+                  type="text"
+                  placeholder="Start Searching by Source"
+                  id="searchSource"
+                  onkeyup="searchBySource()"
+                />
+            </div> 
+                      
+            <div class="search">
+                <input
+                  type="text"
+                  placeholder="Start Searching by Destination"
+                  id="searchDestination"
+                  onkeyup="searchByDestination()"
+                />
+            </div> 
+    
+            <table border="1" cellspacing="0" class="table">
+              <thead>
+                <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Number</th> 
+                <th>Passanger Capacity</th>
+                <th>Actions</th>
+                </tr>
+             </thead>
+             <tbody class="tdata"></tbody>
+            </table>
+
+        </div>
+        <script src="Assignment_2.js"></script>
+    </body>
+</html>
+
